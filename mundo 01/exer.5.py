@@ -1,0 +1,7 @@
+print('\n')
+n1 = int(input('Digite um numero para saber seu sucessor e antecessor: '))
+print('O sucessor do numero {} é {}'.format(n1, (n1+1)))
+print('E o antecessor do numero {} é {} '.format(n1,(n1-1)))
+print('\n')
+print('\n')
+print('OBRIGADA PELA PREFÊRENCIA NO MEU PROGRAMA BosPY <3')
