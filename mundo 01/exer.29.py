@@ -1,8 +1,8 @@
 import math
-velo = float(input('Digite a velocidade que você percorreu: km ')).__floor__()
-valor = (velo - 80) * 7
+velocidade = float(input('Digite a velocidade que você percorreu: km ')).__ceil__()
+valor = (velocidade - 80) * 7
 
-if velo > 80:
+if velocidade > 80:
     print('Você ultrapassou o limite permitido'
           f'\nDe acordo com o valor da multa de R$7,00 por km acima do limite a multa fica: R${valor:.2f}')
 else:
