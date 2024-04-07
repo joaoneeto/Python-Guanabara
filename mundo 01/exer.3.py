@@ -1,4 +1,7 @@
-n1 = int(input('Digite um valor:'))
-n2 = int(input('Digite outro valor:'))
+n1 = int(input('Digite um valor: '))
+n2 = int(input('Digite outro valor: '))
 s = n1 + n2
-print('A soma entre {} e {} vale {}'.format(n1, n2, s))
+fim = '\033[m'
+azul = '\033[34m'
+verm = '\033[31m'
+print(f'A soma entre {verm}{n1}{fim} e {verm}{n2}{fim} vale: {azul}{s}{fim}')
