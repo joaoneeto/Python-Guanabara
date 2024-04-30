@@ -7,40 +7,50 @@
 # ACIMA DE 40 OBESIDADE MORBIDA
 
 
-peso = float(input('Digite seu peso: '))
-altura = float(input('Digite sua altura: '))
 
-imc = peso / (altura * altura)
+def calcular_imc(peso, altura):
+    try:
+        imc = peso/(altura*altura)
+    finally:
+
+        return imc
+
+def status_imc(imc):
 
 # ABAIXO DO PESO
-if imc < 18.5:
-    print('Abaixo do peso')
+    if imc < 18.5:
+        status = 'Abaixo do peso'
 # PESO IDEAL
-elif 18.5 <= imc < 25:
-    print('Peso ideal')
+    elif 18.5 <= imc < 25:
+        status = 'Peso ideal'
 # SOBREPESO
-elif 25 <= imc < 30:
-    print('Sobrepeso')
+    elif 25 <= imc < 30:
+        status = 'Sobrepeso'
 # OBESIDADE
-elif 30 <= imc < 40:
-    print('Obesidade')
+    elif 30 <= imc < 40:
+        status = 'Obesidade'
 # OBESIDADE MÓRBIDA
-else:
-    print('Obesidade Mórbida')
+    else:
+        status = 'Obesidade Mórbida'
+    return status
 
 
+# TENTANDO UTILIZAR O QUE APRENDI DE EXCESSOES
+while True:
+    try:
+        peso = float(input('Digite seu peso: '))
+        altura= float(input('Digite sua altura: '))
+
+        break
+    except ValueError:
+        print('APENAS NUMERO E NO LUGAR DE VIRGULA(,), COLOQUE PONTO(.)')
 
 
+# Calcular o IMC
+imc = calcular_imc(peso, altura)
 
+# Determinar o status do IMC
+status = status_imc(imc)
 
-
-
-
-
-
-
-
-
-
-
+print('De acordo com seu IMC, seu status é {}'.format(status))
 
